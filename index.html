@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Drill 2</title>
+
+<style>
+    body{
+        background-color: darkred;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 150px;
+        margin-bottom: 100px;
+
+    }
+    h2{
+        text-align: center;
+        color: orangered;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h3{
+        text-align: left;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+    }
+    p{
+        text-align: left;
+        font-size: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <h2>Heat Index Checker</h2>
+     <h3>Note:</h3>
+     <p>Input the temperature (°C) and humidity (%), 
+        then click to see the heat index and it's status.
+     </p>
+       <label  id="heatInput">Degree in C</label>
+       <input type="number" id="tempInput">
+      <label  id="heatInput">Degree in humidity</label>
+
+      <input type="number" id="humidityInput">
+
+    <button onclick="showHeatIndex()">CHECK HEAT INDEX</button>
+
+    <h4 id="result"></h4>
+
+     <script>
+        
+        function showHeatIndex(){
+            var temp = parseInt(document.getElementById("tempInput").value);
+            var humidity = parseInt(document.getElementById("humidityInput").value);
+            var Status;
+
+        HeatIndex = temperature + (0.33 * humidity) - 4;
+        
+        switch(true){
+              case 1 (number >=20 && number<=24):
+               Status= "Comfortable/Cool"(A);
+                break;
+
+            case 2 (number >=25 && number<=27):
+               Status= "Warm"(B);
+                break;
+
+            case 3 (number >=28 && number<=31):
+               Status= "Hot"(C);
+                break;
+
+            case 4 (number >=32 && number<=35):
+               Status= "Caution Very Hot"(D);
+                break;
+             
+            case 5 (number >=36):
+               Status= "Danger, Extreme Heat"(E);
+                break;
+        }
+ switch(true){
+            case 1 (number >=30 && number<=50):
+               Status= "Comfortable/Cool"(A);
+                break;
+
+            case 2 (number >=40 && number<=60):
+               Status= "Warm"(B);
+                break;
+
+            case 3 (number >=50 && number<=70):
+               Status= "Hot"(C);
+                break;
+
+            case 4 (number >=60 && number<=80):
+               Status= "Caution Very Hot"(D);
+                break;
+             
+            case 5 (number >=70 && number <=100):
+               Status= "Danger, Extreme Heat"(E);
+                break;
+
+
+           
+        }
+
+        document.getElementById("result").
+        innerHTML = Status;
+
+
+
+
+        }
+
+     </script>
+
+
+</body>
+</html>
